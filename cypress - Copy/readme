@@ -1,0 +1,58 @@
+Data driven method:
+Definition:
+data-driven testing separates the test data from the test script. Any data which is required for your tests are stored separately using .csv, .json, or .excel files.
+For a single data (object) values passing from fixture(login.json) we used single fixture
+To send multiple values decalare it globally, also use foreach loop (iterates each and every data in the fixture).
+
+.each and .foreach content based upon the scenerios.
+
+hooks is:
+special functions that control the flow of test execution, allowing you to set up preconditions,
+perform cleanup, and manage shared states between tests, improving test efficiency and maintainability. 
+
+before: Executes code once before all tests in a suite.
+beforeEach: Executes code before each individual test in a suite.
+afterEach: Executes code after each individual test in a suite.
+after: Executes code once after all tests in a suite have completed.
+
+custom commands:
+Cypress allows you to create custom commands using Cypress.Commands.add(). 
+These commands help reduce code duplication, make tests more readable, and improve maintainability.
+Also it is so powerful way to streamline your tests. 
+
+
+POM: 
+
+Page Object Model (POM) is a design pattern used in test automation to create an object repository for web UI elements. Also it helps to separate test scripts from page-specific logic, making tests more reusable, maintainable, and readable.
+
+uses: 
+
+Encapsulation: Page logic is separated from test logic.
+
+Reusability: Use the same page object across multiple test files.
+
+Maintenance: Update selectors in one place if they change.
+
+iframes:
+An inline frame (iframe) is a HTML element that loads another HTML page within the document. It essentially puts another webpage within the parent page. They are commonly used for advertisements, embedded videos, web analytics and interactive content.
+
+upload a file:
+need a plugin npm
+command.js: import 'cypress-file-upload';
+
+.attachfile(<//required file>)
+
+To run a specific file using terminal:
+npx cypress run --spec "<//filename.extensoin>"
+
+npx cypress open ======ui method or headed method
+npx cypress run ====== headless mode
+
+SCREENSHOT:
+Automatically it will take a scrnshot, whenever the test case fails.
+
+Report generation:
+Mochaawesome report , allure report.
+
+npm i cypress-mochawesome-reporter
+to run test:npx cypress run --reporter mochawesome 

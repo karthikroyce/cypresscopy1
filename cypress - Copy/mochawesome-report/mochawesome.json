@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-04-08T05:08:23.850Z",
+    "end": "2025-04-08T05:08:28.628Z",
+    "duration": 4778,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "08cebe71-333b-4fe2-b70f-0ffc1e8b65be",
+      "title": "",
+      "fullFile": "cypress\\e2e\\webtable.cy.js",
+      "file": "cypress\\e2e\\webtable.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b6d600cc-a7e1-4e87-bc59-51c5bf194a66",
+          "title": "template spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "passes",
+              "fullTitle": "template spec passes",
+              "timedOut": null,
+              "duration": 2935,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\webtable.cy.js\\\\template spec -- passes (failed).png\"\n    ]\n  ]\n}",
+              "code": "cy.visit('https://rahulshettyacademy.com/AutomationPractice/');\ncy.get('table>tbody>tr>td:nth-child(2)').each($td => {\n  if ($td.text().includes('Bugzilla')) {\n    cy.wrap().then(expect => {\n      const result = expect.text();\n      cy.log(result);\n    });\n  }\n});",
+              "err": {
+                "message": "TypeError: Cannot read properties of undefined (reading 'text')",
+                "estack": "TypeError: Cannot read properties of undefined (reading 'text')\n    at Context.eval (webpack://cypress/./cypress/e2e/webtable.cy.js:9:36)\n    at getRet (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:118349:20)\n    at tryCatcher (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:118360:66)\n    at Context.then (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:118611:21)\n    at wrapped (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:138862:19)\n    at <unknown> (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:144789:15)\n    at tryCatcher (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:1777:23)",
+                "diff": null
+              },
+              "uuid": "a65ee764-8907-4e6d-9bbf-d36e20dbb15d",
+              "parentUUID": "b6d600cc-a7e1-4e87-bc59-51c5bf194a66",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a65ee764-8907-4e6d-9bbf-d36e20dbb15d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2935,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
